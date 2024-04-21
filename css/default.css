@@ -12,6 +12,7 @@ html {
 }
 
 .wrapper {
-	width: 180rem;
+	max-width: 1920px;
+	padding: 0 60px;
 	margin: 0 auto;
 }
