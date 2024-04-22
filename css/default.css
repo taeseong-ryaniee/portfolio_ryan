@@ -9,6 +9,7 @@ html {
 	background-color: #fbfbfb;
 	word-break: break-all;
 	overflow-x: hidden;
+	font-smooth: always;
 -webkit-font-smoothing: subpixel-antialiased;
 -moz-osx-font-smoothing : grayscale;
 }
