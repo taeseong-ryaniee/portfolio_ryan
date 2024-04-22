@@ -18,13 +18,12 @@ span{
 }
 #wrap{
 	min-width: 1920px;
-	padding: 0 6rem;
 	overflow: hidden;
 
 
 
 }
 .wrapper {
-		width: 1920px;
+	width: 1800px;
 	margin: 0 auto;
 }
