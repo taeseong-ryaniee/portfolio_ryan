@@ -1,5 +1,4 @@
 @import url(../css/layout.css);
-
 @import url(../css/reset.css);
 @import url(../css/default.css);
 
@@ -19,6 +18,7 @@ border-bottom: 0.1rem solid #adadad;
 
 
 }
+
 .project_wrap img{
 width: 90%;
 
@@ -47,7 +47,7 @@ border-radius: 4rem;
 h3{
     font-size: 3rem;
     font-weight: 400;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 padding-top: 4rem;}
 
 .project_purpose ul{
@@ -60,27 +60,114 @@ border-bottom: 0.1rem solid #adadad;
     font-size: 2rem;
     line-height: 3.5rem;
 }
-
 .project_concept .concept_list{
     display: grid;
-    grid-template-columns: 1fr 3.5fr;}
+    grid-template-columns: 1fr 3.5fr;
+    margin-bottom: 7rem;}
 
 
 h4{
 font-size: 2.5rem;
 text-align: right;
 font-weight: 400;
-margin-right: 15rem;
-    margin-bottom: 3rem}
+margin-right: 20rem;}
+
+.project_concept .wrapper{
+border-bottom: 0.1rem solid #adadad;}
+
+.project_concept .concept_list{
+    margin-bottom: 10rem;}
 
 .project_concept .concept_list ul{
     font-size: 2rem;
-    margin-bottom: 10rem;}
+    line-height: 3rem;
+    margin-right: 5rem;}
 
 
 .project_concept .concept_sub_tit{
     font-size: 2.5rem;
+    margin-bottom: 5rem;
+    font-weight: 500
 ;}
+
+
+
+.project_concept .color_list{
+    display: flex;
+    justify-content: flex-start}
+
+
+.project_concept .color_list .color_name01,
+.project_concept .color_list .color_name02
+{width: 20rem;
+border: 0.1rem soild #2b2b2b;
+border-radius: 1.5rem;}
+
+.project_concept .color_list .color_code01,
+.project_concept .color_list .color_code02
+{margin: 0 3rem;}
+
+.project_concept .color_list .color_name01
+{background-color: #2b2b2b;}
+
+.project_concept .color_list .color_name02
+{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='308' height='86' viewBox='0 0 308 86'%3E%3Cg id='사각형_57' data-name='사각형 57' fill='%23fbfbfb' stroke='%232b2b2b' stroke-width='1'%3E%3Crect width='308' height='86' rx='20' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='307' height='85' rx='19.5' fill='none'/%3E%3C/g%3E%3C/svg%3E%0A");
+background-repeat: no-repeat no-repeat;
+background-position: center center;
+background-size: 20rem auto;}
+
+.project_concept .concept_list .font_wrap{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;}
+
+
+.project_concept .font_list01 .list_wrap,
+.project_concept .font_list02 .list_wrap{
+padding: 0;}
+
+.project_concept .font_list01 li,
+.project_concept .font_list02 li{
+padding: 0;
+margin-bottom: 1rem;
+}
+
+.project_concept .font_list01 .font_info,
+.project_concept .font_list02 .font_info{
+display: flex;
+justify-content: space-between;
+margin-bottom: 0;
+}
+
+.project_concept .font_list01,
+.project_concept .font_list02{
+margin-bottom:unset;}
+
+.project_concept .font_list01 .font_info li,
+.project_concept .font_list02 .font_info li{
+padding-right: 5rem;
+}
+
+.project_concept .font_info .bold_title,
+.project_concept .font_info .bold_info{
+font-weight: 600;}
+
+.project_concept .font_info .regular_title,
+.project_concept .font_info .regular_info{
+font-weight: 400;}
+
+.project_concept .font_list02{
+font-family: Suite Variable, sans-serif;}
+
+.output_display .display_wrap{
+display: flex;}
+
+.output_display .display_wrap span{
+display: block;
+font-size: 3rem;
+margin-bottom: 5rem;}
+
+
 
 
 

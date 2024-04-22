@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/variable/woff2/SUITE-Variable.css");
+
 body,
 html {
 	font-family: "mr-eaves-xl-sans", "gill-sans-nova", "futura PT", "omnigothic", pretendard, Noto Sans, sans-serif;
@@ -26,4 +28,5 @@ span{
 .wrapper {
 	width: 1800px;
 	margin: 0 auto;
+	padding: 0 5rem;
 }
