@@ -15,7 +15,7 @@ html {
 }
 
 span{
-  transform : rotate(0.03deg);
+  transform : rotate(0.02deg);
 }
 .wrapper {
 	max-width: 1920px;
