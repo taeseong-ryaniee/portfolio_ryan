@@ -14,11 +14,14 @@ html {
 }
 
 span{
-  transform : rotate(0.02deg);
+    transform : rotate(0.02deg);
 }
 #wrap{
-	width: 1920px;
+	min-width: 1920px;
 	padding: 0 6rem;
+	overflow: hidden;
+
+
 
 }
 .wrapper {
