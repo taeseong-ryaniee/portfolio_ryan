@@ -1,0 +1,86 @@
+@import url(../css/layout.css);
+
+@import url(../css/reset.css);
+@import url(../css/default.css);
+
+.main_title{
+    margin-top: 5rem;
+    font-size: 6rem;
+    font-weight: 500;}
+
+.project_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    font-weight: 400;
+border-bottom: 0.1rem solid #adadad;
+
+
+}
+.project_wrap img{
+width: 90%;
+
+}
+
+.project_wrap .project_tit {
+position: relative;}.project_wrap .project_tit span{
+display: block;
+font-size: 4rem;}
+.project_wrap .project_tit .title_ko
+{margin-bottom: 2rem;}
+
+.project_wrap .project_tit .title_en
+{font-weight: 30;}
+
+.project_wrap .project_tit .link_site{
+position: absolute;
+top: 0;
+right: 0;
+font-size: 2rem;
+padding: 0.5rem 2.5rem;
+border: 0.1rem solid #adadad;
+border-radius: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+padding-top: 4rem;}
+
+.project_purpose ul{
+    padding-bottom: 3rem;
+border-bottom: 0.1rem solid #adadad;
+
+}
+
+.project_purpose ul li{
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+.project_concept .concept_list{
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;}
+
+
+h4{
+font-size: 2.5rem;
+text-align: right;
+font-weight: 400;
+margin-right: 15rem;
+    margin-bottom: 3rem}
+
+.project_concept .concept_list ul{
+    font-size: 2rem;
+    margin-bottom: 10rem;}
+
+
+.project_concept .concept_sub_tit{
+    font-size: 2.5rem;
+;}
+
+
+
