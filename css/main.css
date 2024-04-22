@@ -23,11 +23,11 @@ h2 {
 .main .main_title::before {
 	content: '';
 	position: absolute;
-	width: 110%;
+	width: 100%;
 	height: 0.1rem;
 	background-color: #adadad;
 	bottom: -6rem;
-	left: -5rem;
+	left: 0;
 }
 .main .main_name {
 	display: flex;
