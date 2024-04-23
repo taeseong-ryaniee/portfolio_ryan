@@ -1,6 +1,12 @@
 @import url(../css/layout.css);
 @import url(../css/reset.css);
 @import url(../css/default.css);
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .main_title{
     margin-top: 5rem;

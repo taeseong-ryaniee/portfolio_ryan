@@ -16,7 +16,7 @@ html {
 }
 
 span{
-    transform : rotate(0.02deg);
+    transform : rotate(0.04deg);
 }
 #wrap{
 	min-width: 1800px;
