@@ -27,11 +27,10 @@ border-bottom: 0.1rem solid #adadad;
 
 .project_wrap img{
 width: 90%;
-
+position: relative;
 }
 
-.project_wrap .project_tit {
-position: relative;}.project_wrap .project_tit span{
+.project_wrap .project_tit span{
 display: block;
 font-size: 4rem;}
 .project_wrap .project_tit .title_ko
@@ -42,8 +41,8 @@ font-size: 4rem;}
 
 .project_wrap .project_tit .link_site{
 position: absolute;
-top: 0;
-right: 0;
+top: 72rem;
+left: 40%;
 font-size: 2rem;
 padding: 0.5rem 2.5rem;
 border: 0.1rem solid #adadad;
@@ -117,10 +116,7 @@ border-radius: 1.5rem;}
 {background-color: #2b2b2b;}
 
 .project_concept .color_list .color_name02
-{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='308' height='86' viewBox='0 0 308 86'%3E%3Cg id='사각형_57' data-name='사각형 57' fill='%23fbfbfb' stroke='%232b2b2b' stroke-width='1'%3E%3Crect width='308' height='86' rx='20' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='307' height='85' rx='19.5' fill='none'/%3E%3C/g%3E%3C/svg%3E%0A");
-background-repeat: no-repeat no-repeat;
-background-position: center center;
-background-size: 20rem auto;}
+{background-color: #003831;}
 
 .project_concept .concept_list .font_wrap{
     display: flex;
@@ -162,11 +158,20 @@ font-weight: 600;}
 .project_concept .font_info .regular_info{
 font-weight: 400;}
 
+.project_concept .font_info .light_title,
+.project_concept .font_info .light_info{
+font-weight: 300;}
+
+
+.project_concept .font_list01{
+font-family: Neuzeit Grotesk, GowunBatang-Regular, sans-serif;}
+
 .project_concept .font_list02{
 font-family: Suite Variable, sans-serif;}
 
 .output_display .display_wrap{
-display: flex;}
+display: flex;
+justify-content: space-between;}
 
 .output_display .display_wrap span{
 display: block;
