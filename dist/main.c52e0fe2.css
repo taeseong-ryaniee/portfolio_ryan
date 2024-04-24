@@ -1,0 +1,424 @@
+/* 태그초기화 - 태그의 기본스타일 제거 */
+* {
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0;
+    box-sizing: border-box;}
+    /* padding하고 border는 넓이를 늘리는 요소인데 넓이를 늘리지 않도록 하는 속성 */
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu, summary {
+    list-style: none;
+}
+
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    line-break: after-white-space;
+    -webkit-user-select: auto;
+    user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+    display: none;
+}
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/variable/woff2/SUITE-Variable.css");
+
+body,
+html {
+	font-family: "mr-eaves-xl-sans", "gill-sans-nova", "futura PT", "omnigothic", pretendard, Noto Sans, sans-serif;
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 1.2;
+	letter-spacing: -0.08rem;
+	color: #2b2b2b;
+	background-color: #fbfbfb;
+	word-break: break-all;
+	font-smooth: always;
+-webkit-font-smoothing: subpixel-antialiased;
+-moz-osx-font-smoothing : grayscale;
+}
+
+span{
+    transform : rotate(0.04deg);
+}
+#wrap{
+	min-width: 1800px;
+	overflow: hidden;
+
+
+
+}
+.wrapper {
+	width: 1800px;
+	margin: 0 auto;
+	padding: 0 5rem;
+}
+
+.header .header_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 3.5rem;
+}
+
+.header .header_wrap .logo {
+	width: 11rem;
+	height: 13rem;
+	padding: 1rem;
+}
+
+.header .header_wrap .logo a {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("data:image/svg+xml,%3Csvg id='그룹_62' data-name='그룹 62' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='125.943' viewBox='0 0 100 125.943'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_63' data-name='사각형 63' width='100' height='125.943' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_61' data-name='그룹 61' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_503' data-name='패스 503' d='M86.679,13.692Q73.336,0,50.095,0,26.641,0,13.335,13.692-.007,27.373,0,53.494v72.449H6.086V52.956c0-2.55.266-4.836.47-7.182H93.448c.2,2.347.467,4.632.467,7.182v72.987H100V53.494q0-26.118-13.321-39.8M7.155,40.409c1.585-9.513,5.01-17.2,10.475-22.874Q29.16,5.546,50.095,5.547T82.472,17.536C87.885,23.206,91.28,30.9,92.853,40.409Z' transform='translate(0)' fill='%231a1311'/%3E%3Cpath id='패스_504' data-name='패스 504' d='M32.869,79.247c1.427,1.405,2.155,3.473,2.155,6.195V96.455h-3.48V85.835a5.885,5.885,0,0,0-1.324-4.186,5.052,5.052,0,0,0-3.829-1.413,5.969,5.969,0,0,0-4.44,1.645,6.389,6.389,0,0,0-1.631,4.71v9.864H16.855V69.661h3.464V80.019a7.146,7.146,0,0,1,2.84-2.126,9.688,9.688,0,0,1,3.915-.757,7.878,7.878,0,0,1,5.795,2.111' transform='translate(-1.525 -6.303)' fill='%231a1311'/%3E%3Cpath id='패스_505' data-name='패스 505' d='M44.928,96.15a9.128,9.128,0,0,1-3.566-3.486,10.541,10.541,0,0,1,0-10.075,9.026,9.026,0,0,1,3.566-3.464,11.139,11.139,0,0,1,10.235,0A9.143,9.143,0,0,1,58.7,82.589a10.541,10.541,0,0,1,0,10.075,9.249,9.249,0,0,1-3.537,3.486,10.968,10.968,0,0,1-10.235,0m8.429-2.62a5.907,5.907,0,0,0,2.286-2.38,7.9,7.9,0,0,0,0-7.046,5.909,5.909,0,0,0-2.286-2.366,6.991,6.991,0,0,0-6.609,0A6.076,6.076,0,0,0,44.433,84.1a7.775,7.775,0,0,0,0,7.046,6.072,6.072,0,0,0,2.315,2.38,6.84,6.84,0,0,0,6.609,0' transform='translate(-3.626 -7.047)' fill='%231a1311'/%3E%3Cpath id='패스_506' data-name='패스 506' d='M18.368,129.191a5.847,5.847,0,0,1-1.514-4.317v-21.16h3.465v20.869a3.463,3.463,0,0,0,.742,2.388,2.8,2.8,0,0,0,2.213.829,4.044,4.044,0,0,0,1.7-.364l.175,2.853a7.091,7.091,0,0,1-2.489.437,5.752,5.752,0,0,1-4.295-1.536' transform='translate(-1.525 -9.384)' fill='%231a1311'/%3E%3Cpath id='패스_507' data-name='패스 507' d='M27.594,106.979a2.153,2.153,0,0,1-.655-1.586,2.216,2.216,0,0,1,.655-1.609,2.5,2.5,0,0,1,3.363-.036,2.059,2.059,0,0,1,.669,1.573,2.228,2.228,0,0,1-.669,1.644,2.26,2.26,0,0,1-1.674.663,2.332,2.332,0,0,1-1.689-.649m-.044,4.331h3.465v19.144H27.55Z' transform='translate(-2.437 -9.33)' fill='%231a1311'/%3E%3Cpath id='패스_508' data-name='패스 508' d='M54.578,112.108v19.144h-3.32v-3.036a7.487,7.487,0,0,1-2.926,2.424,9.045,9.045,0,0,1-3.9.83,10.016,10.016,0,0,1-4.979-1.231A8.741,8.741,0,0,1,36,126.79a10.258,10.258,0,0,1-1.252-5.111A10.154,10.154,0,0,1,36,116.592a8.846,8.846,0,0,1,3.45-3.435,10.089,10.089,0,0,1,4.979-1.223,9.261,9.261,0,0,1,3.8.771A7.379,7.379,0,0,1,51.113,115v-2.89Zm-6.566,15.476a5.941,5.941,0,0,0,2.3-2.38,7.9,7.9,0,0,0,0-7.046,5.944,5.944,0,0,0-2.3-2.366,6.962,6.962,0,0,0-6.595,0,6.076,6.076,0,0,0-2.315,2.366,7.775,7.775,0,0,0,0,7.046,6.072,6.072,0,0,0,2.315,2.38,6.812,6.812,0,0,0,6.595,0' transform='translate(-3.144 -10.128)' fill='%231a1311'/%3E%3Cpath id='패스_509' data-name='패스 509' d='M76.927,112.413a8.841,8.841,0,0,1,3.45,3.435,10.154,10.154,0,0,1,1.252,5.088,10.259,10.259,0,0,1-1.252,5.111,8.735,8.735,0,0,1-3.45,3.45,10.016,10.016,0,0,1-4.979,1.231,9.045,9.045,0,0,1-3.9-.83,7.487,7.487,0,0,1-2.926-2.424v3.036H61.8V103.714h3.465v10.54a7.379,7.379,0,0,1,2.882-2.293,9.265,9.265,0,0,1,3.8-.771,10.089,10.089,0,0,1,4.979,1.223m-1.965,14.427a6.073,6.073,0,0,0,2.315-2.38,7.775,7.775,0,0,0,0-7.046,6.076,6.076,0,0,0-2.315-2.366,6.962,6.962,0,0,0-6.595,0,5.979,5.979,0,0,0-2.315,2.366,7.9,7.9,0,0,0,0,7.046,5.975,5.975,0,0,0,2.315,2.38,6.812,6.812,0,0,0,6.595,0' transform='translate(-5.592 -9.384)' fill='%231a1311'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-size: auto 10rem;
+}
+
+.header .header_wrap .gnb ul {
+	display: flex;
+	justify-content: space-between;
+}
+.header .header_wrap .gnb li a {
+	margin-left: 10rem;
+}
+h2 {
+	font-size: 10rem;
+	font-weight: 600;
+}
+.main {
+	margin-top: 50rem;
+	font-family: 'gill-sans-nova', sans-serif;
+	font-weight: 300;
+	padding-bottom: 9rem;
+}
+
+.main .main_title {
+	display: flex;
+	justify-content: space-between;
+	font-size: 5rem;
+	position: relative;
+}
+
+.main .main_title::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 0.1rem;
+	background-color: #adadad;
+	bottom: -6rem;
+	left: 0;
+}
+.main .main_name {
+	display: flex;
+	justify-content: space-between;
+	font-size: 26rem;
+	letter-spacing: 1rem;
+	margin-top: 7rem;
+}
+.bio {
+	display: block;
+	width: 100%;
+	height: 121rem;
+	padding-top: 12rem;
+	background: linear-gradient(#fbfbfb, #f2f2f2);
+}
+.bio h2 {
+	display: none;
+}
+
+.bio .bio_wrap {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.bio .portrait {
+	font-size: 4rem;
+}
+
+.bio .portrait img {
+	width: 52rem;
+	object-fit: cover;
+}
+
+.bio .portrait span {
+	display: block;
+	margin-bottom: 1rem;
+	margin-left: 2rem;
+}
+
+.bio .portrait .main_name {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+
+.bio .portrait .main_name .kr_name {
+	font-weight: 400;
+}
+
+.bio .introduce {
+	display: block;
+	margin-left: 16rem;
+}
+
+.bio .introduce span {
+	display: block;
+}
+
+.bio .introduce h3 {
+	font-size: 6rem;
+	margin-top: 35rem;
+}
+
+.bio .introduce h3 em {
+	font-weight: 600;
+}
+
+.bio .introduce .author {
+	margin-top: 3rem;
+	margin-bottom: 8rem;
+	font-size: 4rem;
+}
+
+.bio .introduce .intro_txt {
+	font-size: 2.5rem;
+	line-height: 2;
+}
+
+.career {
+	background-color: #f2f2f2;
+	padding-bottom: 4rem;
+}
+.career h2 {
+	padding: 10rem 0;
+}
+.career .career01,
+.career .career02 {
+	display: grid;
+	grid-template-columns: 1fr 1.1fr;
+	align-items: end;
+}
+.career .career_company {
+	font-size: 4rem;
+	text-align: right;
+	margin-right: 7rem;
+	margin-bottom: 3rem;
+}
+.career .career_company .company_title_kr {
+	font-weight: 400;
+}
+.career .career_company .company_title_en {
+	margin-top: 2rem;
+	font-size: 2.5rem;
+}
+
+.career .career_project {
+	padding-left: 7rem;
+	border-left: 0.1rem solid #adadad;
+}
+
+.career .career_project li {
+	position: relative;
+	margin-bottom: 4rem;
+}
+
+.career .career_project span {
+	display: block;
+}
+
+.career .career_project .project_tit {
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 2.5rem;
+}
+
+.career .career_project .project_tit em {
+	font-size: 2.5rem;
+	margin-left: 3rem;
+	font-weight: 300;
+}
+
+.career .career_project .project_info {
+	font-size: 2rem;
+}
+
+.career .career_project .project_duration {
+	font-family: "futura-PT", sans-serif;
+	position: absolute;
+	font-size: 6rem;
+	font-weight: 700;
+	bottom: 0;
+	right: 5rem;
+	text-align: left;
+	opacity: 10%;
+}
+
+.career .career02 {
+	margin-top: 15rem;
+}
+
+.career .career02 .project01 {
+	margin-top: 3rem;
+}
+
+.project {
+	padding: 20rem 0;
+	background: linear-gradient(#f2f2f2, #f6f2f6, #ebe9f3);
+}
+
+.project h3 {
+	font-size: 5rem;
+	text-align: right;
+	font-weight: 500;
+	margin-bottom: 5rem;
+	margin-right: 3rem;
+}
+
+.project a {
+	font-size: 4rem;
+}
+
+.project .project_name {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 3rem;
+	padding-right: 13rem;
+	line-height: 15rem;
+	border-top: solid 0.1rem #adadad;
+	position: relative;
+}
+
+.project .project_name:after {
+	position: absolute;
+	display: block;
+	top: 5.7rem;
+	right: 3rem;
+	width: 3rem;
+	height: 3rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='47' height='47' viewBox='0 0 47 47'%3E%3Cpath id='패스_121' data-name='패스 121' d='M1547.993,3683.5h47' transform='translate(-1547.993 -3660.5)' fill='none' stroke='%232b2b2b' stroke-width='2'/%3E%3Cpath id='패스_122' data-name='패스 122' d='M0,0H47' transform='translate(23.5) rotate(90)' fill='none' stroke='%232b2b2b' stroke-width='2'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-size: 3rem auto;
+	content: '';
+}
+
+.project .web,
+.project .bi,
+.project .designwork,
+.project .curator {
+	margin-top: 15rem;
+}
+
+.project .web ul.web_list > li:last-child,
+.project .bi ul.bi_list > li:last-child,
+.project .designwork ul.designwork_list > li:last-child,
+.project .curator ul.curatir_list > li:last-child {
+	border-bottom: solid 0.1rem #adadad;
+}
+
+.contact {
+	padding-top: 15rem;
+	background: linear-gradient(#eceaf3, #fbfbfb);
+}
+
+.contact h2 {
+	font-size: 20rem;
+	margin-bottom: 20rem;
+}
+.contact ul li {
+	font-size: 18rem;
+	line-height: 15rem;
+}
+.footer .copyright {
+	display: block;
+	text-align: right;
+	margin: 10rem 0;
+	font-size: 4rem;
+}
+
+
+/*# sourceMappingURL=/main.c52e0fe2.css.map */
