@@ -2,25 +2,23 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TaeSeong YI's Portfoilo | 이태성의 작업기록 (a.k.a Aholiab)</title>
         <meta name="description" content="이태성의 포트폴리오 사이트입니다.">
         <meta name="keywords" content="이태성, TaeSeong YI, Ryan, Aholiab, UI/UX, 디자인, 포트폴리오">
         <meta name="author" content="이태성">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
-            WebFontConfig = {
-               typekit: { id: 'ynj2qfl' }
-            };
-         
             (function(d) {
-               var wf = d.createElement('script'), s = d.scripts[0];
-               wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-               wf.async = true;
-               s.parentNode.insertBefore(wf, s);
+              var config = {
+                kitId: 'ynj2qfl',
+                scriptTimeout: 3000,
+                async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
-         </script>
+          </script>
     </head>
     <body>
         <div id="wrap">
