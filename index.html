@@ -7,9 +7,40 @@
         <meta name="description" content="이태성의 포트폴리오 사이트입니다.">
         <meta name="keywords" content="이태성, TaeSeong YI, Ryan, Aholiab, UI/UX, 디자인, 포트폴리오">
         <meta name="author" content="이태성">
-        <script src="js/font_import.js"></script>
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="preconnect" href="https://use.typekit.net">
+        <script>
+            (function(d) {
+                var config = {
+                    kitId: 'ynj2qfl',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h=d.documentElement,
+                t=setTimeout(function(){
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk=d.createElement("script"),
+                f=false,
+                s=d.getElementsByTagName("script")[0],
+                a;
+                h.className+=" wf-loading";
+                tk.src='https://use.typekit.net/'+config.kitId+'.js';
+                tk.async=true;
+                tk.defer=true;
+                tk.onload=tk.onreadystatechange=function(){
+                    a = this.readyState;
+                    if(f || a && a != "complete" && a != "loaded") return;
+                    f=true;
+                    clearTimeout(t);
+                    try {
+                        Typekit.load(config)
+                    } catch(e) {}
+                };
+                s.parentNode.insertBefore(tk, s);
+            })(document);
+        </script>   
     </head>
     <body>
         <div id="wrap">
