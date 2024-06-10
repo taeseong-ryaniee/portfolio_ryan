@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/variable/woff2/SUITE-Variable.css");
-
 body,
 html {
 	font-family: "mr-eaves-xl-sans", "gill-sans-nova", "futura PT", "omnigothic", pretendard, Noto Sans, sans-serif;
@@ -11,6 +9,7 @@ html {
 	background-color: #fbfbfb;
 	word-break: break-all;
 	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
 -webkit-font-smoothing: subpixel-antialiased;
 -moz-osx-font-smoothing : grayscale;
 }
