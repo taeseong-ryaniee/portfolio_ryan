@@ -9,7 +9,7 @@
         <meta name="author" content="이태성">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="preconnect" href="https://use.typekit.net">
+        <link rel="dns-prefetch" href="https://use.typekit.net/">
         <script>
             (function(d) {
                 var config = {
@@ -77,7 +77,11 @@
                 <div class="wrapper">
                     <div class="bio_wrap">
                         <div class="portrait">
-                            <img src="images/portrait.png" alt="이태성 사진">
+                            <picture>
+                                <source srcset="images/avif/portrait.avif" type="image/avif">
+                                <img src="images/portrait.png" alt="이태성 사진">
+                            </picture>
+
                             <div class="main_name">
                                 <span class="kr_name">이태성</span>
                                 <span class="en_name">TaeSeong YI<br>(a.k.a TaeSeong Ryan YI)</span>
