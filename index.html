@@ -7,32 +7,33 @@
         <meta name="description" content="이태성의 포트폴리오 사이트입니다.">
         <meta name="keywords" content="이태성, TaeSeong YI, Ryan, Aholiab, UI/UX, 디자인, 포트폴리오">
         <meta name="author" content="이태성">
-        <meta name="og:image" content="https://github.com/taeseong-ryaniee/portfolio_ryan/logo.ico">
+        <meta property="og:type" content="portfolio">
+        <meta property="og:image" content="https://github.com/taeseong-ryaniee/portfolio_ryan/logo.ico">
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="dns-prefetch" href="https://use.typekit.net/">
         <script>
             (function(d) {
-                var config = {
-                    kitId: 'ynj2qfl',
-                    scriptTimeout: 3000,
-                    async: true
-                },
-                h=d.documentElement,
-                t=setTimeout(function(){
-                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-                }, config.scriptTimeout),
-                tk=d.createElement("script"),
-                f=false,
-                s=d.getElementsByTagName("script")[0],
-                a;
+                let config = {
+                        kitId: 'ynj2qfl',
+                        scriptTimeout: 3000,
+                        async: true
+                    },
+                    h = d.documentElement,
+                    t = setTimeout(function () {
+                        h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                    }, config.scriptTimeout),
+                    tk = d.createElement("script"),
+                    f = false,
+                    s = d.getElementsByTagName("script")[0],
+                    a;
                 h.className+=" wf-loading";
                 tk.src='https://use.typekit.net/'+config.kitId+'.js';
                 tk.async=true;
                 tk.defer=true;
                 tk.onload=tk.onreadystatechange=function(){
                     a = this.readyState;
-                    if(f || a && a != "complete" && a != "loaded") return;
+                    if(f || a && a !== "complete" && a !== "loaded") return;
                     f=true;
                     clearTimeout(t);
                     try {
@@ -52,9 +53,9 @@
                     <nav class="gnb">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#bio">Bio</a></li>
-                            <li><a href="#project">Project</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Bio</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -182,7 +183,7 @@
                         <h3>BRAND IDENTITY</h3>
                         <ul class="bi_list">
                             <li class="list01">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://" target="_blank" rel="noopener noreferrer">
                                     <ul class="project_name">
                                         <li class="list_tit_kr">산만이들의 밤(팟캐스트)</li>
                                         <li class="list_tit_en">NIGHT OF DISTRACTED PEOPLE(PODCAST)</li>
@@ -195,7 +196,7 @@
                         <h3>DESIGN WORK</h3>
                         <ul class="designwork_list">
                             <li class="list01">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://" target="_blank" rel="noopener noreferrer">
                                     <ul class="project_name">
                                         <li class="list_tit_kr">웹포스터</li>
                                         <li class="list_tit_en">WEB POSTER</li>
@@ -203,7 +204,7 @@
                                 </a>
                             </li>
                             <li class="list02">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="https://" target="_blank" rel="noopener noreferrer">
                                     <ul class="project_name">
                                         <li class="list_tit_kr">SNS 배너 디자인</li>
                                         <li class="list_tit_en">SNS BANNER DESIGN</li>
