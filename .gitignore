@@ -5,3 +5,12 @@ out/
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+
+# 개인 에이전트·도구 설정
+CLAUDE.md
+.claude/
+.codex/
+.impeccable/
+
+# 로컬 사본
+logo 복사본.png
