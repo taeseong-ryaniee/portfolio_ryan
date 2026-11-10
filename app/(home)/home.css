@@ -1,0 +1,18 @@
+/* 원래 메인(a9d56a8 default.css) 의 기본값. 1920px 에서 1rem = 10px, 그보다 좁으면 화면 폭을 따른다(최소 6px). */
+html,
+body {
+	font-family: "mr-eaves-xl-sans", "gill-sans-nova", "futura PT", "omnigothic", pretendard, Noto Sans, sans-serif;
+	font-weight: 300;
+	font-size: clamp(6px, calc(100vw / 192), 10px);
+	line-height: 1.2;
+	letter-spacing: -0.08rem;
+	color: #2b2b2b;
+	background-color: #fbfbfb;
+	word-break: break-all;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+span {
+	transform: rotate(0.04deg);
+}

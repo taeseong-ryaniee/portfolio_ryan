@@ -1,0 +1,28 @@
+{
+  "name": "aholiab-works",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taeseong-ryaniee/portfolio_ryan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taeseong-ryaniee/portfolio_ryan/issues"
+  },
+  "homepage": "https://github.com/taeseong-ryaniee/portfolio_ryan#readme",
+  "dependencies": {
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

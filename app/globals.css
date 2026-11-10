@@ -1,0 +1,144 @@
+/* AHOLIAB.WORKS BI v1.0 기준 — 잉크·종이 9할, 청·자·홍 세 실은 합쳐 1할 이하. 제목 A2Z, 본문 Wanted Sans, 영문은 둘 다 Elms Sans.
+   여러 페이지가 함께 쓰는 토큰·기본값·브랜드 요소·헤더·푸터만 둔다. 페이지 전용 규칙은 각 page.module.css 에 있다. */
+
+@font-face { font-family: 'A2Z'; font-weight: 300; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/%EC%97%90%EC%9D%B4%ED%88%AC%EC%A7%80%EC%B2%B4-3Light.woff2') format('woff2'); }
+@font-face { font-family: 'A2Z'; font-weight: 500; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/%EC%97%90%EC%9D%B4%ED%88%AC%EC%A7%80%EC%B2%B4-5Medium.woff2') format('woff2'); }
+@font-face { font-family: 'A2Z'; font-weight: 600; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/%EC%97%90%EC%9D%B4%ED%88%AC%EC%A7%80%EC%B2%B4-6SemiBold.woff2') format('woff2'); }
+@font-face { font-family: 'A2Z'; font-weight: 700; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/%EC%97%90%EC%9D%B4%ED%88%AC%EC%A7%80%EC%B2%B4-7Bold.woff2') format('woff2'); }
+
+:root {
+	--ink: #2B2B2B;
+	--paper: #FFFFFF;
+	--linen: #EFEDE7;
+	--blue: #24417E;
+	--purple: #6E3565;
+	--red: #A82F35;
+	--line: #ECEAE4;
+	--muted: #6E6B66;
+	--body: #57544E;
+	--display: var(--font-elms), 'A2Z', 'Wanted Sans Variable', sans-serif;
+	--text: var(--font-elms), 'Wanted Sans Variable', 'Wanted Sans', system-ui, sans-serif;
+	--gutter: clamp(20px, 4.5vw, 64px);
+	--header: 96px;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+	font-family: var(--text);
+	font-size: 16px;
+	line-height: 1.7;
+	color: var(--ink);
+	background: var(--paper);
+	word-break: keep-all;
+	-webkit-font-smoothing: antialiased;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main { flex: 1; }
+
+/* reset.css 의 all:unset 이 기본 포커스 링을 지워서 다시 둔다 */
+:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+.container {
+	max-width: calc(1312px + var(--gutter) * 2);
+	margin: 0 auto;
+	padding: 0 var(--gutter);
+}
+
+/* ── 심볼 · 워드마크 ── */
+.mark { display: block; flex: none; --mark-body: var(--ink); --mark-cut: var(--paper); }
+.on-ink .mark { --mark-body: var(--paper); --mark-cut: var(--ink); }
+
+.wordmark {
+	font-family: var(--display);
+	font-weight: 600;
+	letter-spacing: .04em;
+	line-height: 1;
+	white-space: nowrap;
+}
+.wordmark b { font-weight: 300; }
+
+/* 가로형 시그니처: 간격은 마크 폭의 절반, 최소 높이 40px */
+.signature { display: inline-flex; align-items: flex-end; gap: 15px; }
+.signature .mark { width: 30px; height: 41px; }
+.signature .wordmark { font-size: 17px; }
+
+/* ── 공통 텍스트 요소 ── */
+.eyebrow {
+	font-size: 14px;
+	letter-spacing: .08em;
+	color: var(--muted);
+}
+
+.thread { display: flex; }
+.thread i { display: block; width: 44px; height: 4px; }
+.thread i:nth-child(1) { background: var(--blue); }
+.thread i:nth-child(2) { background: var(--purple); }
+.thread i:nth-child(3) { background: var(--red); }
+
+.section-title {
+	margin-top: 16px;
+	font-family: var(--display);
+	font-weight: 700;
+	font-size: clamp(36px, 4vw, 56px);
+	letter-spacing: -.02em;
+	line-height: 1.12;
+}
+.section-title + .eyebrow { margin-top: 12px; }
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	margin-top: 38px;
+	padding: 16px 26px;
+	font-size: 16px;
+	color: var(--paper);
+	background: var(--ink);
+	transition: background-color .2s;
+}
+.btn:hover { background: var(--blue); }
+
+/* ── 헤더 ── */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: var(--paper);
+	border-bottom: 1px solid var(--line);
+}
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: var(--header);
+}
+.gnb ul { display: flex; gap: 40px; }
+.gnb a { font-size: 15px; color: #3A3936; }
+.gnb a:hover { color: var(--blue); }
+.gnb a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* ── 푸터 ── */
+.site-footer {
+	padding: 32px 0;
+	font-size: 13px;
+	color: rgba(255, 255, 255, .55);
+	background: var(--ink);
+	border-top: 1px solid rgba(255, 255, 255, .12);
+}
+.footer-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.site-footer .wordmark { font-size: 14px; color: var(--paper); }
+
+/* ── 좁은 화면 ── */
+@media (max-width: 900px) {
+	:root { --header: 72px; }
+}
+@media (max-width: 560px) {
+	.signature .wordmark { font-size: 15px; }
+	.gnb ul { gap: 18px; }
+	.gnb a { font-size: 14px; }
+	.footer-row { flex-direction: column; align-items: flex-start; }
+}
