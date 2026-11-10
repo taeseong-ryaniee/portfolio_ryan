@@ -1,0 +1,23 @@
+/* 첫 화면(a9d56a8 layout.css)의 헤더. 첫 화면과 하위 페이지가 같이 쓴다. */
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5rem;
+	font-size: 3.5rem;
+}
+.logo {
+	display: block;
+	width: 11rem;
+	height: 13rem;
+	font-size: 0;
+	background: url("/images/aholiab-mark.svg") no-repeat center / auto 10rem;
+}
+.gnb ul { display: flex; }
+.gnb a { margin-left: 10rem; }
+.gnb a[aria-current="page"] { font-weight: 500; }
+
+@media (max-width: 600px) {
+	.row { padding: 0 2rem; font-size: 2.6rem; }
+	.gnb a { margin-left: 2.4rem; }
+}

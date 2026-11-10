@@ -1,91 +1,58 @@
+/* 원래 작업 상세(a9d56a8 project_web.css). */
+
 /* 폰트 견본에서만 쓰는 서체 */
 @font-face { font-family: 'SUITE'; font-weight: 300 900; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/variable/woff2/SUITE-Variable.woff2') format('woff2'); }
 @font-face { font-family: 'Gowun Batang'; font-weight: 400; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff'); }
 @font-face { font-family: 'Gowun Batang'; font-weight: 700; font-display: swap; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff'); }
 
-.crumb { display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: var(--muted); }
-.crumb a:hover { color: var(--blue); }
+.page { padding-top: 5rem; padding-bottom: 15rem; }
+.label { font-size: 6rem; font-weight: 500; text-transform: uppercase; }
 
-.hero { padding-top: clamp(40px, 6vw, 64px); }
-.head, .hero .grid { margin-top: 32px; }
-.grid {
+.visual {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
-	gap: clamp(40px, 5vw, 66px);
-	align-items: center;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 6rem;
+	align-items: end;
+	margin-top: 5rem;
+	padding-bottom: 5rem;
+	border-bottom: 0.1rem solid #adadad;
 }
-.title {
-	font-family: var(--display);
-	font-weight: 700;
-	font-size: clamp(40px, 5vw, 72px);
-	letter-spacing: -.02em;
-	line-height: 1.12;
+.visual img { display: block; width: 90%; height: auto; }
+.title { margin-bottom: 2rem; font-size: 4rem; font-weight: 400; }
+.en { font-size: 4rem; font-weight: 200; }
+.siteLink {
+	display: inline-block;
+	margin-top: 4rem;
+	padding: 0.5rem 2.5rem;
+	font-size: max(13px, 2rem);
+	font-weight: 400;
+	border: 0.1rem solid #adadad;
+	border-radius: 4rem;
+	transition: background-color .2s;
 }
-.en { margin-top: 14px; font-size: 14px; letter-spacing: .05em; color: var(--muted); }
-.hero :global(.thread) { margin-top: 32px; }
-.visual img, .screens img, .full img { display: block; width: 100%; height: auto; }
+.siteLink:hover { background: #fff; }
 
-.body { padding-bottom: clamp(80px, 10vw, 128px); }
-.full { margin-top: clamp(40px, 5vw, 64px); border: 1px solid var(--line); }
+.row { padding: 4rem 0 3rem; border-bottom: 0.1rem solid #adadad; }
+.row:last-of-type { border-bottom: 0; }
+.rowLabel { margin-bottom: 7rem; font-size: 3rem; font-weight: 400; }
 
-.row {
-	display: grid;
-	grid-template-columns: minmax(180px, 1fr) minmax(0, 3fr);
-	gap: 40px;
-	padding: 32px 0;
-	border-top: 1px solid var(--ink);
-}
-.row:first-of-type { margin-top: clamp(40px, 5vw, 64px); }
-.row:last-of-type { border-bottom: 1px solid var(--ink); }
-.rowLabel { font-family: var(--display); font-weight: 600; font-size: 18px; }
+.purpose { list-style: decimal inside; }
+.purpose li { font-size: max(14px, 2rem); line-height: 1.75; }
 
-.purpose { counter-reset: purpose; }
-.purpose li {
-	counter-increment: purpose;
-	display: grid;
-	grid-template-columns: 40px minmax(0, 1fr);
-	gap: 12px;
-	font-size: 17px;
-	line-height: 1.8;
-	color: var(--body);
-}
-.purpose li + li { margin-top: 12px; }
-.purpose li::before {
-	content: counter(purpose, decimal-leading-zero);
-	font-family: var(--display);
-	font-weight: 600;
-	color: var(--ink);
-}
+.conceptItem { display: grid; grid-template-columns: 1fr 3.5fr; margin-bottom: 7rem; }
+.concept dt { padding-right: 20rem; font-size: max(14px, 2.5rem); font-weight: 400; text-align: right; }
+.concept dd { margin-right: 5rem; }
+.concept dd strong { display: block; margin-bottom: 3rem; font-size: max(15px, 2.5rem); font-weight: 500; }
+.concept dd p { font-size: max(14px, 2rem); line-height: 1.5; }
 
-.conceptItem { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; }
-.conceptItem + .conceptItem { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
-.concept dt { padding-top: 3px; font-size: 14px; color: var(--muted); }
-.concept dd > strong { display: block; font-family: var(--display); font-weight: 600; font-size: 20px; }
-.concept dd > p { margin-top: 8px; max-width: 44em; font-size: 16px; line-height: 1.8; color: var(--body); }
+.swatches { display: flex; flex-wrap: wrap; gap: 3rem 6rem; }
+.swatches li { display: flex; align-items: center; gap: 3rem; font-size: max(12px, 2rem); line-height: 1.5; font-variant-numeric: tabular-nums; }
+.swatch { display: block; width: 20rem; height: 6rem; border: 0.1rem solid rgba(43, 43, 43, .15); border-radius: 1.5rem; }
 
-.swatches { display: flex; flex-wrap: wrap; gap: 32px; }
-.swatches li {
-	display: flex;
-	align-items: center;
-	gap: 16px;
-	font-size: 14px;
-	line-height: 1.6;
-	color: var(--body);
-	font-variant-numeric: tabular-nums;
-}
-.swatch { display: block; width: 64px; height: 64px; border: 1px solid rgba(43, 43, 43, .15); }
-
-.specimen + .specimen { margin-top: 28px; }
-.specimenName { font-family: var(--display); font-weight: 600; font-size: 20px; }
-.specimenRow {
-	display: grid;
-	grid-template-columns: 80px minmax(0, 1fr);
-	gap: 16px;
-	align-items: baseline;
-	margin-top: 10px;
-}
-.specimenRow > span:first-child { font-size: 12px; letter-spacing: .05em; color: var(--muted); }
-.specimenRow .sample { font-size: 22px; line-height: 1.4; }
+.fonts { display: flex; flex-wrap: wrap; gap: 4rem 10rem; }
+.concept .note { margin: -2rem 0 2rem; font-size: max(12px, 1.6rem); }
+.concept .specimenRow { display: flex; gap: 3rem; margin-bottom: 1rem; font-size: max(14px, 2rem); line-height: 1.5; }
+.specimenRow span:first-child { flex: none; min-width: 9rem; }
 .ffMontserrat { font-family: var(--font-montserrat), sans-serif; }
 .ffSuite { font-family: 'SUITE', sans-serif; }
 .ffGowun { font-family: 'Gowun Batang', serif; }
@@ -93,18 +60,17 @@
 .screens {
 	display: grid;
 	grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
-	gap: 32px;
+	gap: 6rem;
 	align-items: start;
 }
-.screens figcaption { margin-bottom: 12px; font-size: 14px; color: var(--muted); }
-.screens img { border: 1px solid var(--line); }
+.screens figcaption { margin-bottom: 5rem; font-size: 3rem; }
+.screens img, .full img { display: block; width: 100%; height: auto; border: 0.1rem solid #e6e6e6; }
+.full { margin-top: 5rem; }
 
 @media (max-width: 900px) {
-	.grid { grid-template-columns: minmax(0, 1fr); }
-	.row { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-	.screens { grid-template-columns: minmax(0, 1fr); }
+	.visual, .conceptItem, .screens { grid-template-columns: minmax(0, 1fr); }
+	.visual img { width: 100%; }
+	.concept dt { margin-bottom: 2rem; padding-right: 0; text-align: left; }
+	.concept dd { margin-right: 0; }
 	.screens figure:last-child { max-width: 260px; }
-}
-@media (max-width: 560px) {
-	.conceptItem, .specimenRow { grid-template-columns: minmax(0, 1fr); gap: 6px; }
 }

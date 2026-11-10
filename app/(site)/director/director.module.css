@@ -1,91 +1,57 @@
-.director { padding: clamp(80px, 10vw, 128px) 0; background: var(--linen); }
-.grid {
+/* 원래 메인의 bio · career 섹션(a9d56a8 main.css). */
+.bio {
+	padding: 12rem 0 16rem;
+	background: linear-gradient(#fbfbfb, #f2f2f2);
+}
+.bioRow { display: flex; }
+.portrait { flex: none; font-size: 4rem; }
+.portrait img { display: block; width: 52rem; height: auto; }
+.portrait p { margin-left: 2rem; }
+.portrait .names { margin: 4rem 0 2rem 2rem; }
+.names span { display: block; }
+.kr { margin-bottom: 1rem; font-weight: 400; }
+
+.introduce { margin-left: 16rem; }
+.quote { margin-top: 35rem; font-size: 6rem; }
+.quote em { font-weight: 600; }
+.author { margin: 3rem 0 8rem; font-size: 4rem; }
+.text { font-size: max(14px, 2.5rem); line-height: 2; }
+.text + .text { margin-top: 2em; }
+
+.career {
+	padding-bottom: 10rem;
+	background: linear-gradient(#f2f2f2 80%, #fbfbfb);
+}
+.careerTitle { padding: 10rem 0; font-size: min(10rem, 13vw); font-weight: 600; }
+.org {
 	display: grid;
-	grid-template-columns: minmax(260px, 400px) minmax(0, 1fr);
-	gap: clamp(48px, 8vw, 120px);
-	align-items: start;
-	margin-top: clamp(40px, 5vw, 64px);
+	grid-template-columns: 1fr 1.1fr;
+	align-items: end;
 }
-
-/* BI 사원증 시안(CR80 54×86 세로, 사진 없음) 비율 */
-.idCard { display: flex; flex-direction: column; aspect-ratio: 54 / 86; color: var(--paper); background: var(--ink); }
-.idBody { flex: 1; display: flex; flex-direction: column; padding: 36px 32px 40px; }
-.idBody :global(.wordmark) { font-size: 14px; }
-.idName {
-	margin-top: auto;
-	font-family: var(--display);
-	font-weight: 700;
-	font-size: clamp(48px, 5vw, 64px);
-	line-height: 1;
-}
-.idEn { margin-top: 14px; font-size: 21px; color: rgba(255, 255, 255, .72); }
-.idMeta { margin-top: 4px; font-size: 14px; color: rgba(255, 255, 255, .5); }
-.idCard :global(.thread) { margin-top: auto; }
-.idCard :global(.thread) i { width: 30px; }
-.idRole {
-	padding: 18px 32px;
-	font-family: var(--display);
-	font-weight: 600;
-	font-size: 20px;
-	letter-spacing: .18em;
-	background: var(--blue);
-}
-
-.quote {
-	display: block;
-	font-family: var(--display);
-	font-weight: 300;
-	font-size: clamp(32px, 3.6vw, 52px);
-	line-height: 1.15;
-	letter-spacing: -.01em;
-}
-.quote em { font-weight: 700; }
-.author { display: block; margin-top: 20px; font-size: 15px; letter-spacing: .04em; color: var(--muted); }
-.intro { margin-top: 44px; max-width: 40em; font-size: 17px; line-height: 1.9; color: var(--body); }
-.intro + .intro { margin-top: 24px; }
-
-.career { margin-top: 72px; }
-.careerTitle {
-	display: flex;
-	align-items: baseline;
-	gap: 12px;
-	padding-bottom: 16px;
-	border-bottom: 1px solid var(--ink);
-	font-family: var(--display);
-	font-weight: 600;
-	font-size: 20px;
-}
-.careerTitle span, .org h3 span {
-	font-family: var(--text);
-	font-weight: 400;
-	font-size: 12px;
-	letter-spacing: .08em;
-	color: var(--muted);
-}
-.org { padding: 28px 0; border-bottom: 1px solid rgba(43, 43, 43, .15); }
-.org h3 { font-family: var(--display); font-weight: 600; font-size: 22px; }
-.org h3 span { display: block; margin-top: 6px; }
-.org li {
-	display: grid;
-	grid-template-columns: 112px minmax(0, 1fr);
-	gap: 24px;
-	margin-top: 20px;
-}
+.org + .org { margin-top: 15rem; }
+.company { margin: 0 7rem 3rem 0; font-size: 4rem; text-align: right; }
+.company h3 { font-weight: 400; }
+.company p { margin-top: 2rem; font-size: max(12px, 2.5rem); }
+.projects { padding-left: 7rem; border-left: 0.1rem solid #adadad; }
+.projects li { position: relative; margin-bottom: 4rem; }
+.projectTitle { margin-bottom: 2.5rem; font-size: max(16px, 3rem); font-weight: 400; }
+.projectTitle em { margin-left: 3rem; font-size: max(12px, 2.5rem); font-weight: 300; }
+.info { font-size: max(13px, 2rem); line-height: 1.5; }
 .year {
-	font-family: var(--display);
-	font-weight: 500;
-	font-size: 15px;
-	color: var(--muted);
-	font-variant-numeric: tabular-nums;
+	position: absolute;
+	right: 5rem;
+	bottom: 0;
+	font-size: 6rem;
+	font-weight: 700;
+	opacity: 0.1;
 }
-.org strong { font-weight: 600; font-size: 17px; }
-.org em { margin-left: 8px; font-size: 13px; color: var(--muted); }
-.org p { margin-top: 4px; font-size: 15px; color: var(--body); }
 
 @media (max-width: 900px) {
-	.grid { grid-template-columns: minmax(0, 1fr); }
-	.idCard { max-width: 400px; }
-}
-@media (max-width: 560px) {
-	.org li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+	.bioRow { flex-direction: column; }
+	.introduce { margin: 10rem 0 0; }
+	.quote { margin-top: 0; }
+	.org { grid-template-columns: minmax(0, 1fr); gap: 4rem; }
+	.company { margin: 0; text-align: left; }
+	.projects { padding-left: 4rem; }
+	.projectTitle em { display: block; margin: 1rem 0 0; }
 }

@@ -1,0 +1,21 @@
+/* 원래 사이트(a9d56a8 default.css)의 기본값. 첫 화면과 하위 페이지가 같이 쓴다.
+   1920px 에서 1rem = 10px, 그보다 좁으면 화면 폭을 따라 줄어든다(최소 6px). 영문 Elms Sans, 한글 넥슨 Lv.1 고딕 Light(서체 파일은 각 layout 의 <link>). */
+
+html { font-size: clamp(6px, calc(100vw / 192), 10px); }
+
+body {
+	font-family: var(--font-elms), 'NEXON Lv1 Gothic', sans-serif;
+	font-weight: 300;
+	/* 크기를 따로 주지 않은 글자도 읽을 수 있게 14px 아래로는 줄이지 않는다 */
+	font-size: max(14px, 1.6rem);
+	line-height: 1.2;
+	letter-spacing: -0.08rem;
+	color: #2b2b2b;
+	background-color: #fbfbfb;
+	word-break: keep-all;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* reset.css 의 all:unset 이 기본 포커스 링을 지워서 다시 둔다 */
+:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }

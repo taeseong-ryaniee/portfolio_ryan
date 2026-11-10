@@ -6,38 +6,6 @@
 	min-height: 100svh;
 	overflow: hidden;
 }
-.wrapper {
-	width: 100%;
-	padding: 0 5rem;
-}
-
-.headerRow {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 3.5rem;
-}
-.logo {
-	width: 11rem;
-	height: 13rem;
-	padding: 1rem;
-}
-.logo a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	font-size: 0;
-	line-height: 0;
-	background: url("/images/aholiab-mark.svg") no-repeat center / auto 10rem;
-}
-.gnb ul {
-	display: flex;
-	justify-content: space-between;
-}
-.gnb a {
-	margin-left: 10rem;
-}
-
 .container {
 	flex: 1;
 	display: flex;
@@ -46,10 +14,8 @@
 }
 .main {
 	padding-bottom: 4.6875vw;
-	font-family: 'gill-sans-nova', sans-serif;
-	font-weight: 300;
 }
-.main .wrapper {
+.wrapper {
 	padding: 0 2.604vw;
 }
 .title {
@@ -67,23 +33,12 @@
 	height: max(1px, 0.052vw);
 	background-color: #adadad;
 }
-/* 한 단어가 줄 끝에서 끝까지 차도록(1920px 에서 약 261px) */
+/* 한 단어가 줄 끝에서 끝까지 차도록(Elms Sans 기준, 1920px 에서 약 234px) */
 .name {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 3.646vw;
-	font-size: 13.6vw;
+	font-size: 12.2vw;
 	letter-spacing: 0.521vw;
 }
 
-@media (max-width: 600px) {
-	.wrapper {
-		padding: 0 2rem;
-	}
-	.headerRow {
-		font-size: 2.6rem;
-	}
-	.gnb a {
-		margin-left: 2.4rem;
-	}
-}

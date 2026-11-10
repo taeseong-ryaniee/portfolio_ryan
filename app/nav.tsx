@@ -4,15 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const items = [
-  { href: '/director', label: '디렉터' },
-  { href: '/work', label: '작업' },
-  { href: '/contact', label: '문의' },
+  { href: '/', label: 'Home' },
+  { href: '/director', label: 'Bio' },
+  { href: '/work', label: 'Project' },
+  { href: '/contact', label: 'Contact' },
 ];
 
-export default function Nav() {
+export default function Nav({ className }: { className: string }) {
   const pathname = usePathname();
   return (
-    <nav className="gnb" aria-label="주요 메뉴">
+    <nav className={className} aria-label="주요 메뉴">
       <ul>
         {items.map(({ href, label }) => {
           const current = pathname === href || pathname.startsWith(href + '/');

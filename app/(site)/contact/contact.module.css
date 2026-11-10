@@ -1,49 +1,9 @@
-.contact { padding: clamp(80px, 10vw, 128px) 0; color: var(--paper); background: var(--ink); }
-.contact :global(.eyebrow) { color: rgba(255, 255, 255, .6); }
-.grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-	gap: 40px;
-	align-items: end;
+/* 원래 메인의 contact 섹션(a9d56a8 main.css). 좁은 화면에서는 글자가 화면 폭을 넘지 않게 vw 로 줄인다. */
+.contact {
+	padding: 10rem 0 15rem;
+	background: linear-gradient(#fbfbfb, #eceaf3 40%, #fbfbfb);
 }
-.title {
-	margin-top: 20px;
-	font-family: var(--display);
-	font-weight: 700;
-	font-size: clamp(64px, 10vw, 150px);
-	letter-spacing: -.02em;
-	line-height: 1.05;
-}
-.title + :global(.eyebrow) { margin-top: 12px; }
-.contact :global(.thread) { margin-top: 36px; }
-
-.list { margin-top: 56px; }
-.list li { border-top: 1px solid rgba(255, 255, 255, .18); }
-.list li:last-child { border-bottom: 1px solid rgba(255, 255, 255, .18); }
-.list a {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 0;
-	font-family: var(--display);
-	font-weight: 600;
-	font-size: clamp(24px, 3vw, 40px);
-	letter-spacing: .02em;
-}
-.arrow { font-size: .6em; transition: transform .2s; }
-.list a:hover .arrow { transform: translate(3px, -3px); }
-
-.sign { display: flex; flex-direction: column; align-items: flex-end; gap: 22px; }
-.sign :global(.signature) { gap: 28px; }
-.sign :global(.mark) { width: 72px; height: 98px; }
-.sign :global(.wordmark) { font-size: 26px; }
-.sign span { font-size: 16px; color: rgba(255, 255, 255, .6); }
-
-@media (max-width: 900px) {
-	.grid { grid-template-columns: minmax(0, 1fr); }
-	.sign { align-items: flex-start; }
-}
-/* 옛 전역 CSS 에서 .signature .wordmark(15px) 가 뒤에 와서 이 크기를 이겼다. 같은 결과를 유지한다. */
-@media (max-width: 560px) {
-	.sign :global(.wordmark) { font-size: 15px; }
-}
+.title { margin-bottom: 20rem; font-size: min(20rem, 18vw); font-weight: 600; }
+.list li { font-size: min(18rem, 14vw); line-height: 0.84; }
+.list a { transition: color .2s; }
+.list a:hover { color: #8a8a8a; }
