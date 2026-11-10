@@ -1,0 +1,9 @@
+// Next.js output: 'export' 결과물(out/)을 Workers 정적 자산으로 올린다. 이 파일이 없으면 wrangler 가 OpenNext 자동 설정을 시도해 배포가 실패한다.
+{
+  "name": "portfolio-ryan",
+  "compatibility_date": "2026-11-09",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
